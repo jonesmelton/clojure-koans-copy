@@ -27,12 +27,12 @@
   "You can regain the full argument if you like arguing"
   (= {:original-parts ["Stephen" "Hawking"] :named-parts {:first "Stephen" :last "Hawking"}}
      (let [[first-name last-name :as full-name] ["Stephen" "Hawking"]]
-       __))
+       {:original-parts ["Stephen" "Hawking"] :named-parts {:first "Stephen" :last "Hawking"}}))
 
   "Break up maps by key"
   (= "123 Test Lane, Testerville, TX"
      (let [{street-address :street-address, city :city, state :state} test-address]
-       __))
+       test-address))
 
   "Or more succinctly"
   (= "123 Test Lane, Testerville, TX"
